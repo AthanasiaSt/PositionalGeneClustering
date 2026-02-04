@@ -6,6 +6,7 @@
 
 The pipeline is designed to be general and reusable across organisms and genomic categorizations. It enables the systematic study of how linear genome organization relates to functional, regulatory, evolutionary, and expression-related gene properties.
 
+“Code is provided as used in the analysis and require path and input adaptation.”
 ---
 
 ## Key Concepts
