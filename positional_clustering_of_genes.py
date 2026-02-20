@@ -70,7 +70,7 @@ gtf_all_genes=gtf_to_bed(path_to_gtf)
 
 
 # Computing and storing all the intergenic distances // 
-# Overllaping genes have zero distance 
+# Overlaping genes have zero distance 
 # The algorithm does not consider strands but the coordinates should all be based on a single strand 
 
 # coordinate_df is the dataframe that contains the genes and their coordinates produced at the previous step or provided by the user// 
@@ -83,7 +83,6 @@ def intergenic_distances(coordinate_df):
     coordinate_df = coordinate_df.sort_values(by=['chr','start'])
     
     #1) for each of the chromosomes and all the combinations of genes compute the distance between them // a pair of genes is not taken twice // no directionality
-     #here the distances will be stored for each pair of genes and then for each chromosome
     intergenic_dist_all_genes = {}
 
     lst_chr=coordinate_df['chr'].unique()
@@ -310,7 +309,7 @@ def linearly_clust(dataframe, coordinates_df, intergenic_all_distances):
         neighbouring_distances_genes_mean[chrom] = average_distance
         
     #---------------------------------------------------------------------------------------------------------
-    # Here starts the random permutations (1000). 1000 random intergenic mean distances will be computed for each chromosome.
+    # Here start the random permutations (1000). 1000 random intergenic mean distances will be computed for each chromosome.
     # The same number of genes as in the dataframe will be randomly chosen and random integenic distances of the consecutive random genes will be used to create a random distribution of mean distances
     # Finally z-scores and p values indicating the difference between the observed mean intergenic distances and the expected, will be computed
     
