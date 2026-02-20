@@ -30,7 +30,7 @@ Starting from a user-defined gene set with genomic coordinates, the pipeline:
 1. Computes observed intergenic distances between consecutive genes per chromosome.
 2. Generates chromosome-aware null distributions using random permutation of gene positions.
 3. Computes empirical z-scores and p-values for positional clustering per chromosome.
-4. Identifies significantly clustered (or dispersed) chromosomes.
+4. Identifies significantly clustered (or dispersed) gene sets on chromosomes.
 5. Segments clustered regions into coordinate-level **sub-clusters** based on intra-cluster distance structure.
 6. Computes density and structural properties of detected sub-clusters.
 7. Optionally compares and overlaps sub-clusters across multiple genomic categories.
